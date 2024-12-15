@@ -1,0 +1,31 @@
+package pages
+
+var css1 = templ.NewOnceHandle()
+var htmx1 = templ.NewOnceHandle()
+
+var app1 = templ.NewOnceHandle()
+
+templ root(title string, page templ.Component) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			@css1.Once() {
+				<link href="css/style.css" rel="stylesheet"/>
+			}
+			@htmx1.Once() {
+				<script src="https://unpkg.com/htmx.org@2.0.3"></script>
+			}
+			<title>{ title }</title>
+		</head>
+		<body>
+			<main>
+				@page
+			</main>
+			@app1.Once() {
+				<script src="js/app.js"></script>
+			}
+		</body>
+	</html>
+}
