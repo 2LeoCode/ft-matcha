@@ -1,0 +1,1966 @@
+{
+  "settings": {
+    "version": "2",
+    "engine": "sqlite",
+    "schema": [
+      "sql/schema"
+    ],
+    "queries": [
+      "sql/queries"
+    ],
+    "codegen": {
+      "out": "",
+      "plugin": "",
+      "options": "",
+      "env": [],
+      "process": null,
+      "wasm": null
+    }
+  },
+  "catalog": {
+    "comment": "",
+    "default_schema": "main",
+    "name": "",
+    "schemas": [
+      {
+        "comment": "",
+        "name": "main",
+        "tables": [
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "administrator"
+            },
+            "columns": [
+              {
+                "name": "id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "administrator"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "username",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "administrator"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "password",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "administrator"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "age_gap"
+            },
+            "columns": [
+              {
+                "name": "user_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "age_gap"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "min_age",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "age_gap"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "max_age",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "age_gap"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "j_discussion_message"
+            },
+            "columns": [
+              {
+                "name": "discussion_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "j_discussion_message"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "message_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "j_discussion_message"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "discussion"
+            },
+            "columns": [
+              {
+                "name": "id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "discussion"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "creation_time",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "discussion"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "fame_rating_gap"
+            },
+            "columns": [
+              {
+                "name": "user_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "fame_rating_gap"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "min_fame_rating",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "fame_rating_gap"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "REAL"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "max_fame_rating",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "fame_rating_gap"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "REAL"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "interaction"
+            },
+            "columns": [
+              {
+                "name": "kind",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "interaction"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "creation_time",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "interaction"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "giver_id",
+                "not_null": false,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "interaction"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "given_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "interaction"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "last_position"
+            },
+            "columns": [
+              {
+                "name": "user_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "last_position"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "lattitude",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "last_position"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "longitude",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "last_position"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "message"
+            },
+            "columns": [
+              {
+                "name": "creation_time",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "message"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "content",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "message"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "author_id",
+                "not_null": false,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "message"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "discussion_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "message"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "profile_picture"
+            },
+            "columns": [
+              {
+                "name": "user_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "profile_picture"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "file_name",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "profile_picture"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "data",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "profile_picture"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "BLOB"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "report"
+            },
+            "columns": [
+              {
+                "name": "reason",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "report"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "status",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "report"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "creation_time",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "report"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "assigned_administrator_id",
+                "not_null": false,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "report"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "issuer_id",
+                "not_null": false,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "report"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "target_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "report"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "tag"
+            },
+            "columns": [
+              {
+                "name": "id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "tag"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "name",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "tag"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "j_user_discussion"
+            },
+            "columns": [
+              {
+                "name": "user_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "j_user_discussion"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "discussion_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "j_user_discussion"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "j_user_tag"
+            },
+            "columns": [
+              {
+                "name": "user_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "j_user_tag"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "tag_id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "j_user_tag"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          },
+          {
+            "rel": {
+              "catalog": "",
+              "schema": "",
+              "name": "user"
+            },
+            "columns": [
+              {
+                "name": "id",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "mail",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "password",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "first_name",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "last_name",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "age",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "sex",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "orientation",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "country",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "city",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "bio",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "TEXT"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              },
+              {
+                "name": "suspended",
+                "not_null": true,
+                "is_array": false,
+                "comment": "",
+                "length": -1,
+                "is_named_param": false,
+                "is_func_call": false,
+                "scope": "",
+                "table": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "user"
+                },
+                "table_alias": "",
+                "type": {
+                  "catalog": "",
+                  "schema": "",
+                  "name": "INTEGER"
+                },
+                "is_sqlc_slice": false,
+                "embed_table": null,
+                "original_name": "",
+                "unsigned": false,
+                "array_dims": 0
+              }
+            ],
+            "comment": ""
+          }
+        ],
+        "enums": [],
+        "composite_types": []
+      }
+    ]
+  },
+  "queries": [
+    {
+      "text": "SELECT\n  user.id, user.mail, user.password, user.first_name, user.last_name, user.age, user.sex, user.orientation, user.country, user.city, user.bio, user.suspended,\n  age_gap.user_id, age_gap.min_age, age_gap.max_age,\n  fame_rating_gap.user_id, fame_rating_gap.min_fame_rating, fame_rating_gap.max_fame_rating,\n  last_position.user_id, last_position.lattitude, last_position.longitude\nFROM\n  user\n  INNER JOIN age_gap ON user.id = age_gap.user_id\n  INNER JOIN fame_rating_gap ON user.id = fame_rating_gap.user_id\n  INNER JOIN last_position ON user.id = last_position.user_id\nWHERE\n  user.mail = ? AND user.password = ?",
+      "name": "GetUserFull",
+      "cmd": ":one",
+      "columns": [
+        {
+          "name": "id",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "INTEGER"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "id",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "mail",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "TEXT"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "mail",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "password",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "TEXT"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "password",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "first_name",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "TEXT"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "first_name",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "last_name",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "TEXT"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "last_name",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "age",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "INTEGER"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "age",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "sex",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "INTEGER"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "sex",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "orientation",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "INTEGER"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "orientation",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "country",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "TEXT"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "country",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "city",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "TEXT"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "city",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "bio",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "TEXT"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "bio",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "suspended",
+          "not_null": true,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": {
+            "catalog": "",
+            "schema": "",
+            "name": "user"
+          },
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": "INTEGER"
+          },
+          "is_sqlc_slice": false,
+          "embed_table": null,
+          "original_name": "suspended",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "age_gap",
+          "not_null": false,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": null,
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": ""
+          },
+          "is_sqlc_slice": false,
+          "embed_table": {
+            "catalog": "",
+            "schema": "",
+            "name": "age_gap"
+          },
+          "original_name": "",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "fame_rating_gap",
+          "not_null": false,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": null,
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": ""
+          },
+          "is_sqlc_slice": false,
+          "embed_table": {
+            "catalog": "",
+            "schema": "",
+            "name": "fame_rating_gap"
+          },
+          "original_name": "",
+          "unsigned": false,
+          "array_dims": 0
+        },
+        {
+          "name": "last_position",
+          "not_null": false,
+          "is_array": false,
+          "comment": "",
+          "length": -1,
+          "is_named_param": false,
+          "is_func_call": false,
+          "scope": "",
+          "table": null,
+          "table_alias": "",
+          "type": {
+            "catalog": "",
+            "schema": "",
+            "name": ""
+          },
+          "is_sqlc_slice": false,
+          "embed_table": {
+            "catalog": "",
+            "schema": "",
+            "name": "last_position"
+          },
+          "original_name": "",
+          "unsigned": false,
+          "array_dims": 0
+        }
+      ],
+      "params": [
+        {
+          "number": 1,
+          "column": {
+            "name": "mail",
+            "not_null": true,
+            "is_array": false,
+            "comment": "",
+            "length": -1,
+            "is_named_param": false,
+            "is_func_call": false,
+            "scope": "",
+            "table": {
+              "catalog": "",
+              "schema": "",
+              "name": "user"
+            },
+            "table_alias": "",
+            "type": {
+              "catalog": "",
+              "schema": "",
+              "name": "TEXT"
+            },
+            "is_sqlc_slice": false,
+            "embed_table": null,
+            "original_name": "mail",
+            "unsigned": false,
+            "array_dims": 0
+          }
+        },
+        {
+          "number": 2,
+          "column": {
+            "name": "password",
+            "not_null": true,
+            "is_array": false,
+            "comment": "",
+            "length": -1,
+            "is_named_param": false,
+            "is_func_call": false,
+            "scope": "",
+            "table": {
+              "catalog": "",
+              "schema": "",
+              "name": "user"
+            },
+            "table_alias": "",
+            "type": {
+              "catalog": "",
+              "schema": "",
+              "name": "TEXT"
+            },
+            "is_sqlc_slice": false,
+            "embed_table": null,
+            "original_name": "password",
+            "unsigned": false,
+            "array_dims": 0
+          }
+        }
+      ],
+      "comments": [],
+      "filename": "get-user-full.sql",
+      "insert_into_table": null
+    }
+  ],
+  "sqlc_version": "v1.27.0",
+  "plugin_options": "eyJvdXQiOiJnby9kYXRhYmFzZSJ9",
+  "global_options": ""
+}

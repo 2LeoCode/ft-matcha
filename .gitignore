@@ -1,3 +1,22 @@
+# Executable
 matcha
-pkg/
+
+# Database
+matcha.db
+
+# Credentials
 .env
+
+# Typescript
+node_modules/
+js/
+
+# Go
+pkg/
+*_templ.go
+
+# SQLC generated
+sqlc/
+
+# Editor
+.null-ls*
