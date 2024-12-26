@@ -1,0 +1,77 @@
+package register
+
+import "matcha/go/globals"
+import "strconv"
+
+templ body() {
+	<h1>Register</h1>
+	<form hx-post="/register">
+		<label for="register:first-name">First name</label>
+		<input
+			id="register:first-name"
+			type="text"
+			placeholder="Enter your first name"
+			pattern="^[A-Za-z]{2,}$"
+			required
+		/>
+		<label for="register:last-name">Last name</label>
+		<input
+			id="register:last-name"
+			type="text"
+			placeholder="Enter your last name"
+			pattern="^[A-Za-z]{2,}$"
+			required
+		/>
+		<label for="register:mail">Mail address</label>
+		<input
+			id="register:mail"
+			type="email"
+			placeholder="Enter your mail address"
+			required
+		/>
+		<label id="register:password">Password</label>
+		<input
+			id="register:password"
+			type="password"
+			placeholder="Enter your password"
+			required
+		/>
+		<label for="register:birth-date">Birth date</label>
+		<input id="register:birth-date" type="date" required/>
+		<fieldset id="register:sex">
+			<legend>Sex</legend>
+			<div>
+				<label for="register:sex:male">Male</label>
+				<input id="register:sex:male" type="radio" value="0" checked/>
+			</div>
+			<div>
+				<label for="register:sex:female">Female</label>
+				<input id="register:sex:female" type="radio" value="1"/>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Sexual orientation</legend>
+			<div>
+				<label for="register:orientation:bisexual">Bisexual</label>
+				<input id="register:orientation:bisexual" type="radio" value="0" checked/>
+			</div>
+			<div>
+				<label for="register:orientation:heterosexual">Heterosexual</label>
+				<input id="register:orientation:heterosexual" type="radio" value="1"/>
+			</div>
+			<div>
+				<label for="register:orientation:homosexual">Homosexual</label>
+				<input id="register:orientation:homosexual" type="radio" value="2"/>
+			</div>
+		</fieldset>
+		<label for="register:country">Country</label>
+		<select id="register:country">
+			for i, country := range globals.Countries {
+				<option id={ strconv.Itoa(i) } value={ country } selected?={ i == 0 }>{ country }</option>
+			}
+		</select>
+    <label for="register:bio">Bio</label>
+    <input type=""
+	</form>
+	<script type="module" src="/js/register.js"></script>
+}
