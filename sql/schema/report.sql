@@ -1,8 +1,6 @@
 CREATE TABLE IF NOT EXISTS report (
   reason TEXT NOT NULL,
-  status TEXT NOT NULL CHECK (
-    status IN ('pending', 'being-resolved', 'resolved')
-  ),
+  status TEXT NOT NULL,
   creation_time INTEGER NOT NULL DEFAULT (unixepoch()),
   assigned_administrator_id INTEGER
     REFERENCES administrator (id) ON DELETE SET NULL,

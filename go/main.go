@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"matcha/go/components"
 	"matcha/go/globals"
+	"matcha/go/handlers"
 	"matcha/go/middlewares"
 	"matcha/go/pages/auth"
 	"matcha/go/pages/root"
@@ -16,20 +17,26 @@ import (
 
 func main() {
 	mux := goji.NewMux()
-	// Contains all pages that require auth
-	protectedMux := goji.SubMux()
 
+	// Protected routes
+	protectedMux := goji.SubMux()
+	mux.Handle(pat.NewWithMethods("/*", http.MethodGet, http.MethodPost), protectedMux)
+
+	// Remove trailing slashes on incoming requests
 	mux.Use(middlewares.StripTrailingSlash)
+
+	// Authenticate user for protected routes
 	protectedMux.Use(middlewares.Auth)
+
+	// CORS preflight requests
+	mux.Handle(pat.Options("*"), handlers.CorsPreflight)
 
 	// 404 Not Found fallback
 	mux.Handle(pat.Get("*"), templ.Handler(components.Page("Not found", components.NotFound(), false)))
 
-	// Static CSS and JS files
+	// Servce static CSS and JS files
 	mux.Handle(pat.Get("/css/*"), http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 	mux.Handle(pat.Get("/js/*"), http.StripPrefix("/js/", http.FileServer(http.Dir("js"))))
-
-	mux.Handle(pat.NewWithMethods("/*", http.MethodGet, http.MethodPost), protectedMux)
 
 	// Register page handlers
 	auth.Register(mux)

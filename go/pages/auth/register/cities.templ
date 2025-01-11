@@ -1,0 +1,11 @@
+package register
+
+import "matcha/go/globals"
+import "strconv"
+
+templ cities(start, end int) {
+	<option value="null" disabled selected>-- Select your city --</option>
+	for i, city := range globals.Cities[start:end] {
+		<option id="register:city:%d" value={ strconv.Itoa(start + i) }>{ city.Name }</option>
+	}
+}

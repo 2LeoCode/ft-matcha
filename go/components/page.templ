@@ -8,7 +8,7 @@ templ Page(title string, body templ.Component, showLayout bool) {
 		<head>
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1"/>
-			<link href="css/style.css" rel="stylesheet"/>
+			<link rel="stylesheet" href="css/style.css"/>
 			<script src="https://unpkg.com/htmx.org@2.0.3"></script>
 			<title>{ title }</title>
 		</head>
@@ -25,6 +25,8 @@ templ Page(title string, body templ.Component, showLayout bool) {
 			if contexts.GetUser(ctx) != nil {
 				<!-- Global notifications script -->
 				<script type="module" src="js/notifs.js"></script>
+				<!-- Global utilities script -->
+				<script type="module" src="js/utils.js"></script>
 			}
 		</body>
 	</html>

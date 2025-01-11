@@ -1,7 +1,10 @@
 package register
 
-import "matcha/go/globals"
-import "strconv"
+import (
+	"matcha/go/globals"
+	"fmt"
+	"strconv"
+)
 
 templ body() {
 	<h1>Register</h1>
@@ -9,6 +12,7 @@ templ body() {
 		<label for="register:first-name">First name</label>
 		<input
 			id="register:first-name"
+			name="first-name"
 			type="text"
 			placeholder="Enter your first name"
 			pattern="^[A-Za-z]{2,}$"
@@ -17,6 +21,7 @@ templ body() {
 		<label for="register:last-name">Last name</label>
 		<input
 			id="register:last-name"
+			name="last-name"
 			type="text"
 			placeholder="Enter your last name"
 			pattern="^[A-Za-z]{2,}$"
@@ -25,20 +30,36 @@ templ body() {
 		<label for="register:mail">Mail address</label>
 		<input
 			id="register:mail"
+			name="mail"
 			type="email"
 			placeholder="Enter your mail address"
 			required
 		/>
-		<label id="register:password">Password</label>
+		<label for="register:password">Password</label>
 		<input
 			id="register:password"
+			name="password"
 			type="password"
 			placeholder="Enter your password"
 			required
 		/>
+		<div id="register:password:req">
+			<p id="register:password:req:min-length">Needs to be at least 8 characters</p>
+			<p id="register:password:req:max-length" style="display: none;">Can't be more than 32 characters</p>
+			<p id="register:password:req:lower">Needs to contain at least 1 lowercase letter</p>
+			<p id="register:password:req:upper">Needs to contain at least 1 uppercase letter</p>
+		</div>
 		<label for="register:birth-date">Birth date</label>
-		<input id="register:birth-date" type="date" required/>
-		<fieldset id="register:sex">
+		<input
+			id="register:birth-date"
+			name="birth-date"
+			type="date"
+			required
+		/>
+		<fieldset
+			id="register:sex"
+			name="sex"
+		>
 			<legend>Sex</legend>
 			<div>
 				<label for="register:sex:male">Male</label>
@@ -49,7 +70,10 @@ templ body() {
 				<input id="register:sex:female" type="radio" value="1"/>
 			</div>
 		</fieldset>
-		<fieldset>
+		<fieldset
+			id="register:orientation"
+			name="orientation"
+		>
 			<legend>Sexual orientation</legend>
 			<div>
 				<label for="register:orientation:bisexual">Bisexual</label>
@@ -65,13 +89,53 @@ templ body() {
 			</div>
 		</fieldset>
 		<label for="register:country">Country</label>
-		<select id="register:country">
+		<select
+			id="register:country"
+			name="country"
+			hx-post="/register/country"
+			hx-target="#register:city"
+			hx-sync="closest form:replace"
+			required
+		>
+			<option value="null" disabled selected>-- Select your country --</option>
 			for i, country := range globals.Countries {
-				<option id={ strconv.Itoa(i) } value={ country } selected?={ i == 0 }>{ country }</option>
+				<option id={ fmt.Sprintf("register:country:%d", i) } value={ strconv.Itoa(i) }>{ country }</option>
 			}
 		</select>
-    <label for="register:bio">Bio</label>
-    <input type=""
+		<label for="register:city">City</label>
+		<select
+			id="register:city"
+			name="city"
+			required
+		>
+			<option value="null" disabled selected>-- Select your city --</option>
+		</select>
+		<div id="register:age-gap">
+			<label for="register:age-gap:min">Minimum age to show</label>
+			<input
+				id="register:age-gap:min"
+				name="age-gap:min"
+				type="range"
+				min="18"
+				max="130"
+				value="18"
+			/>
+			<label for="register:age-gap:max">Maximum age to show</label>
+			<input
+				id="register:age-gap:max"
+				name="age-gap:max"
+				type="range"
+				min="18"
+				max="130"
+				value="130"
+			/>
+		</div>
+		<label for="register:bio">Bio</label>
+		<textarea id="register:bio"></textarea>
+		<button id="register:submit" type="submit" disabled>Register</button>
 	</form>
-	<script type="module" src="/js/register.js"></script>
+	<!-- Live feedback for password -->
+	<script type="module" src="/js/register/password.js"></script>
+	<!-- Live form validation -->
+	<script type="module" src="/js/register/submit.js"></script>
 }

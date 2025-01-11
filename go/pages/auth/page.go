@@ -10,9 +10,7 @@ import (
 )
 
 func Register(mux *goji.Mux) {
-	mux.HandleFunc(pat.Get("/auth"), func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "/auth/login", http.StatusMovedPermanently)
-	})
+	mux.Handle(pat.Get("/auth"), http.RedirectHandler("/auth/login", http.StatusMovedPermanently))
 
 	subMux := goji.SubMux()
 	login.Register(subMux)
