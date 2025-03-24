@@ -2,7 +2,15 @@ package components
 
 import "matcha/go/contexts"
 
-templ Page(title string, body templ.Component, showLayout bool) {
+templ header() {
+	<h1>Header</h1>
+}
+
+templ footer() {
+	<h1>Footer</h1>
+}
+
+templ Page(title string, body templ.Component) {
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
@@ -13,20 +21,20 @@ templ Page(title string, body templ.Component, showLayout bool) {
 			<title>{ title }</title>
 		</head>
 		<body>
-			<main>
-				if showLayout {
-					@Header()
-				}
-				@body
-				if showLayout {
-					@Footer()
-				}
-			</main>
 			if contexts.GetUser(ctx) != nil {
+				<main>
+					@header()
+					@body
+					@footer()
+				</main>
 				<!-- Global notifications script -->
 				<script type="module" src="js/notifs.js"></script>
 				<!-- Global utilities script -->
 				<script type="module" src="js/utils.js"></script>
+			} else {
+				<main>
+					@body
+				</main>
 			}
 		</body>
 	</html>

@@ -1,9 +1,11 @@
 package enums
 
+import "matcha/go/utils"
+
 type Sex int64
 
 type sexes struct {
-	enum[Sex]
+	utils.Enum[Sex]
 	Male,
 	Female Sex
 }

@@ -18,29 +18,29 @@ import (
 func main() {
 	mux := goji.NewMux()
 
-	// Protected routes
-	protectedMux := goji.SubMux()
-	mux.Handle(pat.NewWithMethods("/*", http.MethodGet, http.MethodPost), protectedMux)
+	publicRoutes := goji.SubMux()
+	mux.Handle(pat.NewWithMethods("*", http.MethodGet, http.MethodPost), publicRoutes)
+
+	privateRoutes := goji.SubMux()
+	mux.Handle(pat.NewWithMethods("*", http.MethodGet, http.MethodPost), privateRoutes)
 
 	// Remove trailing slashes on incoming requests
 	mux.Use(middlewares.StripTrailingSlash)
 
 	// Authenticate user for protected routes
-	protectedMux.Use(middlewares.Auth)
+	privateRoutes.Use(middlewares.Auth)
 
-	// CORS preflight requests
+	// Handle CORS preflight requests
 	mux.Handle(pat.Options("*"), handlers.CorsPreflight)
 
-	// 404 Not Found fallback
+	// Register 404 Not Found fallback page
 	mux.Handle(pat.Get("*"), templ.Handler(components.Page("Not found", components.NotFound(), false)))
 
-	// Servce static CSS and JS files
+	// Serve static CSS and JS files
 	mux.Handle(pat.Get("/css/*"), http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 	mux.Handle(pat.Get("/js/*"), http.StripPrefix("/js/", http.FileServer(http.Dir("js"))))
 
 	// Register page handlers
-	auth.Register(mux)
-	root.Register(protectedMux)
 
 	// TODO: use https instead of http for production
 	http.ListenAndServe(fmt.Sprintf("%s:%d", globals.ServerHost, globals.ServerPort), mux)

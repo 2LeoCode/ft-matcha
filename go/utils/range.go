@@ -1,6 +1,6 @@
 package utils
 
-type Range struct {
+type IntRange struct {
 	Min,
 	Max int64
 }

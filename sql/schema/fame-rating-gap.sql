@@ -1,5 +1,0 @@
-CREATE TABLE IF NOT EXISTS fame_rating_gap (
-  user_id INTEGER UNIQUE NOT NULL REFERENCES user (id) ON DELETE CASCADE,
-  min_fame_rating REAL NOT NULL DEFAULT 0,
-  max_fame_rating REAL NOT NULL DEFAULT 10
-);

@@ -1,9 +1,11 @@
 package enums
 
+import "matcha/go/utils"
+
 type Orientation int64
 
 type orientations struct {
-	enum[Orientation]
+	utils.Enum[Orientation]
 	Bisexual,
 	Heterosexual,
 	Homosexual Orientation
