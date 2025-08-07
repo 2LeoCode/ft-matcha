@@ -29,15 +29,4 @@ func NewPage(options *PageOptions) *Page {
 }
 
 func (this *Page) Register(mux *goji.Mux) {
-	options := this.options
-	if options == nil {
-		log.Fatalln("Cannot register a page twice")
-	}
-	submux := goji.SubMux()
-	for _, page := range options.Children {
-		page.Register(submux)
-	}
-	mux.Handle(pat.Get(options.Path), options.Setup(submux))
-	mux.Handle(pat.NewWithMethods(fmt.Sprintf("%s/*", options.Path), http.MethodGet, http.MethodPost), submux)
-	this.options = nil
 }

@@ -7,7 +7,6 @@ import (
 	"matcha/go/components"
 	"matcha/go/database"
 	"matcha/go/database/enums"
-	"matcha/go/database/sqlc"
 	"matcha/go/globals"
 	"matcha/go/pages"
 	"net/http"
@@ -179,6 +178,6 @@ var Page = pages.NewPage(&pages.PageOptions{
 			}
 		})
 		mux.Handle(pat.Post("country"), countryHandler)
-		return templ.Handler(components.Page("Register", body()))
+		return templ.Handler(components.Page("Register", body(), false))
 	},
 })

@@ -13,6 +13,6 @@ import (
 var Page = pages.NewPage(&pages.PageOptions{
 	Path: "login",
 	Setup: func(mux *goji.Mux) http.Handler {
-		return templ.Handler(components.Page("Login", body()))
+		return templ.Handler(components.Page("Login", body(), false))
 	},
 })

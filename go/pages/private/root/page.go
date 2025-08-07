@@ -9,6 +9,10 @@ import (
 	"goji.io/v3"
 )
 
-var Page = pages.NewPage(func(path string, mux *goji.Mux) http.Handler {
-	return templ.Handler(components.Page("Matcha", body()))
+var Page = pages.NewPage(&pages.PageOptions{
+	Path: "",
+	Setup: func(mux *goji.Mux) (root http.Handler) {
+		root = templ.Handler(components.Page("Matcha", body(), true))
+		return
+	},
 })

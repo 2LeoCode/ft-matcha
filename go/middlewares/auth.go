@@ -6,12 +6,9 @@ import (
 	"log"
 	"matcha/go/contexts"
 	"matcha/go/database"
-	"matcha/go/database/sqlc"
 	"matcha/go/globals"
 	"net/http"
 	"slices"
-
-	"vendor/golang.org/x/crypto/sha3"
 
 	"github.com/golang-jwt/jwt/v5"
 )
